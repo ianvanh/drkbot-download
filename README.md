@@ -22,7 +22,7 @@
 * *Download And Install [FFmpeg](https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2021-10-06-12-21/ffmpeg-N-104236-g21979cf98e-win64-gpl.zip)*
 * *Download And Install [Libwebp](https://developers.google.com/speed/webp/download)*
 ```bash
-> git clone https://github.com/BotPrivateDrk/drkbot-download
+> git clone https://github.com/BotPrivateDrk/drkbot-download.git
 > cd download-bot
 > npm i && npm start
 
@@ -30,7 +30,7 @@
 ```
 ## ```Termux```
 ```bash
-> git clone https://github.com/BotPrivateDrk/drkbot-download
+> git clone https://github.com/BotPrivateDrk/drkbot-download.git
 > cd download-bot
 > bash install.sh
 
