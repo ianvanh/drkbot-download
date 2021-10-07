@@ -89,7 +89,7 @@ export function Youtube(link){
     v_id: url[1],
     ajax: '1',
     token: '',
-    ftype: 'm4a',
+    ftype: 'mp3',
     fquality: 128
   }
 	axios('https://www.y2mate.com/mates/en68/convert',{

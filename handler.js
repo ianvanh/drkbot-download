@@ -9,25 +9,25 @@ import { Konsol } from './functions/console.js';
 let { Wait, Menu, Note, YtIdRegex, IgIdRegex, TwitIdRegex, TtIdRegex, MediaIdRegex, balas, button, sendSticker, ConvertMedia, BalasYt, sendFileUrl, } = new Setting()
 let session = './session.json';
 
-export let hexa = async (hexa, m,prefix) => {
+export let dbot = async (dbot, m,prefix) => {
 	try {     
         let { chats, id, Group, From } = m
         let { audio, video, document, image } = MessageType
-        if (chats.toLowerCase() === 'bot' || chats.match('@573508770421') || chats.startsWith(`${prefix}help`)) {
+        if (chats.toLowerCase() === 'menu' || chats.match('@573508770421') || chats.startsWith(`${prefix}help`)) {
                         Konsol('Menu','MENU BOT',From)
                         button(id,Menu,'OWNER','HOW TO USE')
         } else if (Object.keys(m.message)[0] == 'imageMessage' || Object.keys(m.message)[0] == 'videoMessage') {
                         if(Group) return
                         Konsol('Sticker',Object.keys(m.message)[0] == 'imageMessage' ? 'Sticker' : 'Sticker GIF',From)
                         balas(id,Wait,m)
-                        let data = await hexa.downloadAndSaveMediaMessage(m)
+                        let data = await dbot.downloadAndSaveMediaMessage(m)
                         let file = 'stiker'
                         sendSticker(id,data,file,m)
         } else if (Object.keys(m.message)[0] == 'stickerMessage') {
                         if(Group) return
                         Konsol('To Media','stickerMessage',From)
                         balas(id,Wait,m)
-                        let data = await hexa.downloadAndSaveMediaMessage(m)
+                        let data = await dbot.downloadAndSaveMediaMessage(m)
                         let file = 'image.png'
                         await ConvertMedia(id,data,file,'DrkBot',m)
         } else if (YtIdRegex.test(chats)) {
@@ -112,7 +112,7 @@ export let hexa = async (hexa, m,prefix) => {
                         + 'ORG:DrkBot;\n' 
                         + 'TEL;type=CELL;type=VOICE;waid=573508770421:+57 350-877-0421\n' 
                         + 'END:VCARD'
-                        await hexa.sendMessage(id, {displayname: "Ian", vcard: vcard}, MessageType.contact)
+                        await dbot.sendMessage(id, {displayname: "Ian", vcard: vcard}, MessageType.contact)
                 break
                 case 'HOW TO USE':
                         balas(id,Note,m)

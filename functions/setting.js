@@ -2,7 +2,7 @@ import
 	{
 	MessageType,
 	} from "@adiwajshing/baileys";
-import { hexa } from './connect.js';
+import { dbot } from './connect.js';
 import ffmpeg from 'fluent-ffmpeg';
 import Axios from 'axios';
 import * as fs from 'fs';
@@ -41,7 +41,7 @@ async Function(m) {
 	m.chats = (Object.keys(m.message)[0] === 'conversation') ? m.message.conversation : (Object.keys(m.message)[0] === 'extendedTextMessage') ? m.message.extendedTextMessage.text : (Object.keys(m.message)[0] === 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedDisplayText : ''
 	m.id = m.key.remoteJid
 	m.Group = m.id.endsWith('@g.us')
-	m.Gc = m.Group ? await hexa.groupMetadata(m.id) : ''
+	m.Gc = m.Group ? await dbot.groupMetadata(m.id) : ''
 	m.NamaGC = m.Group ?  m.Gc.subject : ''
 	m.From = m.NamaGC ? m.NamaGC : m.id
 	return m
@@ -52,7 +52,7 @@ BalasYt(Link) {
 }
 
 async balas(id,teks,m) {
-	await hexa.sendMessage(id,teks,MessageType.text,{quoted:m})
+	await dbot.sendMessage(id,teks,MessageType.text,{quoted:m})
 }
 
 async button(id,teks,id1,id2 ,foots = 'DrkBot') {
@@ -68,7 +68,7 @@ async button(id,teks,id1,id2 ,foots = 'DrkBot') {
 				  headerType: 1
 			  }
 			  
-			await hexa.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
+			await dbot.sendMessage(id, buttonMessage, MessageType.buttonsMessage)
 }
 
 async sendSticker(id,data,file,m) {
@@ -78,7 +78,7 @@ async sendSticker(id,data,file,m) {
 			balas(id,'Error',m)
 			}).on('end', async function () {
 			console.log('Finish')
-			await hexa.sendMessage(id, fs.readFileSync(file), MessageType.sticker, {quoted: m})
+			await dbot.sendMessage(id, fs.readFileSync(file), MessageType.sticker, {quoted: m})
 			fs.unlinkSync(data)
 			fs.unlinkSync(file)
 			})
@@ -91,12 +91,12 @@ async ConvertMedia(id,data,file, cap = '',m) {
 			exec(`ffmpeg -i ${data} ${file}`, async(err) => {
 			if (!err) {
 			let buffer = fs.readFileSync(file)
-			await hexa.sendMessage(id,buffer,MessageType.image,{quoted:m,caption:cap})
+			await dbot.sendMessage(id,buffer,MessageType.image,{quoted:m,caption:cap})
 			fs.unlinkSync(file)
 			fs.unlinkSync(data)
 			} else {
 			let file = await Hx.Webp2gifFile(data)
-			await hexa.sendMessage(id,{url: file.result},MessageType.video,{quoted:m,caption:cap})
+			await dbot.sendMessage(id,{url: file.result},MessageType.video,{quoted:m,caption:cap})
 			fs.unlinkSync(data)
 			}
 		})
@@ -105,7 +105,7 @@ async ConvertMedia(id,data,file, cap = '',m) {
 sendFileUrl(id,Url,type,cap = '',file = '',m) {
 			Axios.get(Url,  { responseType: 'arraybuffer' })
 			.then(async({ data }) => {
-			await hexa.sendMessage(id,Buffer.from(data, "utf-8"),type,{quoted:m,caption: cap,filename: file})
+			await dbot.sendMessage(id,Buffer.from(data, "utf-8"),type,{quoted:m,caption: cap,filename: file})
 			})
 }
 }
