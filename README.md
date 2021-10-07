@@ -4,10 +4,40 @@
 </div>
 
 <p align="center">
-  <a href="https://github.com/ianvanh"><img title="Author" src="https://img.shields.io/badge/Author-Ian-brightgreen.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/ianvanh/drkbot-download/fork">
+    <img src="https://img.shields.io/github/forks/ianvanh/drkbot-download?label=Fork&style=social">
+  </a>
+  <a href="https://github.com/ianvanh/DrkBotPublic/stargazers">
+    <img src="https://img.shields.io/github/stars/ianvanh/drkbot-download?style=social">
+  </a>
+  <a href="https://github.com/ianvanh/drkbot-download/commits/master">
+    <img src="https://img.shields.io/github/commit-activity/m/ianvanh/drkbot-download?style=social">
+  </a>
 </p>
+
 <p align="center">
-<a href="#"><img title="Wa_Bot" src="https://img.shields.io/static/v1?label=Whatsapp&message=Bot&color=brightgreen"></a>
+  <a href="httsp://github.com/ianvanh/drkbot-download">
+    <img src="https://img.shields.io/github/repo-size/ianvanh/drkbot-download?color=purple&label=Peso%20Repositorio&style=plastic">
+
+  </a>
+  <a href="https://github.com/ianvanh/drkbot-download/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/ianvanh/drkbot-download?color=purple&label=Lisencia&style=plastic">
+
+  </a>
+  <a href="https://github.com/ianvanh/drkbot-download">
+    <img src="https://img.shields.io/github/languages/top/ianvanh/drkbot-download?color=purple&label=Javascript&style=plastic">
+
+  </a>
+  <a href="https://github.com/ianvanh">
+    <img src="https://img.shields.io/static/v1?label=Author&message=DarkBox&color=purple&style=plastic">
+
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://t.me/Dark1522">
+    <img src="https://img.shields.io/badge/Telegram-DarkBox-purple&style=plastic">
+  </a>
 </p>
 
 ## ```Requirements```
@@ -38,4 +68,7 @@
 ```
 
 ## ```Thanks```
-* **Ian**
+[![Ian](https://github.com/ianvanh.png?size=150)](#) |
+----|
+[DarkBox](https://t.me/Dark1522) |
+Author, Bug Fixes |
