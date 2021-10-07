@@ -10,7 +10,7 @@
   <a href="https://github.com/ianvanh/DrkBotPublic/stargazers">
     <img src="https://img.shields.io/github/stars/ianvanh/drkbot-download?style=social">
   </a>
-  <a href="https://github.com/ianvanh/drkbot-download/commits/master">
+  <a href="https://github.com/ianvanh/drkbot-download/commits/main">
     <img src="https://img.shields.io/github/commit-activity/m/ianvanh/drkbot-download?style=social">
   </a>
 </p>
