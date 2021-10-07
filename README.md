@@ -20,12 +20,12 @@
     <img src="https://img.shields.io/github/repo-size/ianvanh/drkbot-download?color=purple&label=Peso%20Repositorio&style=plastic">
 
   </a>
-  <a href="https://github.com/ianvanh/drkbot-download/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/ianvanh/drkbot-download?color=purple&label=Lisencia&style=plastic">
+  <a href="https://github.com/ianvanh/drkbot-download">
+    <img src="https://img.shields.io/github/languages/top/ianvanh/drkbot-download?color=yellow&label=Javascript&style=plastic">
 
   </a>
   <a href="https://github.com/ianvanh/drkbot-download">
-    <img src="https://img.shields.io/github/languages/top/ianvanh/drkbot-download?color=purple&label=Javascript&style=plastic">
+    <img src="https://img.shields.io/static/v1?label=Shell&message=0.6%&color=brightgreen&style=plastic">
 
   </a>
   <a href="https://github.com/ianvanh">
