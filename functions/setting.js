@@ -103,7 +103,7 @@ async ConvertMedia(id,data,file, cap = '',m) {
 }
 
 sendFileUrl(id,Url,type,cap = '',file = '',m) {
-			Axios.get(Url,  { responseType: 'arraybuffer' })
+			axios.get(Url,  { responseType: 'arraybuffer' })
 			.then(async({ data }) => {
 			await dbot.sendMessage(id,Buffer.from(data, "utf-8"),type,{quoted:m,caption: cap,filename: file})
 			})
